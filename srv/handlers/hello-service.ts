@@ -1,7 +1,9 @@
-import { Request } from "@sap/cds";
+import { ApplicationService, Request } from "@sap/cds";
 
-module.exports = class say {
+class Say extends ApplicationService {
   hello(req: Request) {
     return `Hello ${req.data.to} from a TypeScript file!`;
   }
-};
+}
+
+module.exports = Say;
